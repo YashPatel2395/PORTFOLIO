@@ -101,14 +101,14 @@ export function Experience() {
   ]
 
   return (
-    <section id="experience" className="min-h-screen flex items-center justify-center px-4 py-20 bg-muted/20 relative">
+    <section id="experience" className="py-20 sm:py-24 bg-muted/20 relative">
       <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_48%,#80808005_49%,#80808005_51%,transparent_52%)] bg-[size:20px_20px]" />
 
-      <div className="container mx-auto max-w-6xl relative z-10">
+      <div className="section-container relative z-10">
         <div className="flex items-center gap-6 mb-16">
           <div className="h-px flex-1 bg-gradient-to-r from-transparent via-border to-border" />
           <div className="relative">
-            <h2 className="text-5xl md:text-6xl font-bold text-center tracking-tight">Experience</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-center tracking-tight">Experience</h2>
             <div className="absolute -bottom-2 left-0 right-0 h-1 bg-foreground/10" />
           </div>
           <div className="h-px flex-1 bg-gradient-to-l from-transparent via-border to-border" />
@@ -129,7 +129,7 @@ export function Experience() {
               <div className="absolute top-0 right-0 w-24 h-24 bg-foreground/5 -mr-12 -mt-12 rotate-45 group-hover:scale-150 transition-transform duration-500" />
 
               <div className="mb-8 relative z-10">
-                <h3 className="text-3xl font-bold mb-3 group-hover:text-foreground/90 transition-colors leading-tight">
+                <h3 className="text-2xl font-bold mb-3 group-hover:text-foreground/90 transition-colors leading-tight">
                   {exp.title}
                 </h3>
                 {exp.period && (
@@ -149,7 +149,7 @@ export function Experience() {
                       <span className="text-2xl">{highlight.icon}</span>
                     </div>
                     <div className="flex-1">
-                      <h4 className="font-bold text-lg mb-3 leading-tight">{highlight.title}</h4>
+                      <h4 className="font-bold text-base mb-3 leading-tight">{highlight.title}</h4>
                       <p className="text-sm text-muted-foreground leading-relaxed">{highlight.description}</p>
                     </div>
                   </div>

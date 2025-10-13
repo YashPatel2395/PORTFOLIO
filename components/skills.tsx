@@ -43,24 +43,24 @@ export function Skills() {
   ]
 
   return (
-    <section id="skills" className="min-h-screen flex items-center justify-center px-4 py-20 relative">
+    <section id="skills" className="py-20 sm:py-24 relative">
       <div className="absolute inset-0 bg-[radial-gradient(circle,#80808008_1px,transparent_1px)] bg-[size:24px_24px]" />
 
-      <div className="container mx-auto max-w-6xl relative z-10">
+      <div className="section-container relative z-10">
         <div className="flex items-center gap-6 mb-16">
           <div className="h-px flex-1 bg-gradient-to-r from-transparent via-border to-border" />
           <div className="relative">
-            <h2 className="text-5xl md:text-6xl font-bold text-center tracking-tight">Technical Skills</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-center tracking-tight">Technical Skills</h2>
             <div className="absolute -bottom-2 left-0 right-0 h-1 bg-foreground/10" />
           </div>
           <div className="h-px flex-1 bg-gradient-to-l from-transparent via-border to-border" />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
           {skillCategories.map((skill, index) => (
             <Card
               key={index}
-              className="p-8 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 hover:border-foreground/30 group relative overflow-hidden"
+              className="p-6 sm:p-8 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 hover:border-foreground/30 group relative overflow-hidden"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-transparent via-foreground/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
@@ -70,7 +70,7 @@ export function Skills() {
                     {String(index + 1).padStart(2, "0")}
                   </div>
                   <div className="flex-1 pt-2">
-                    <h3 className="text-2xl font-bold group-hover:text-foreground/90 transition-colors leading-tight">
+                    <h3 className="text-xl font-bold group-hover:text-foreground/90 transition-colors leading-tight">
                       {skill.title}
                     </h3>
                   </div>

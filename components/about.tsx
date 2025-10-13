@@ -35,22 +35,17 @@ export function About() {
   ]
 
   return (
-    <section
-      id="about"
-      className="min-h-screen flex items-center justify-center px-4 sm:px-6 py-16 sm:py-20 relative overflow-hidden"
-    >
+    <section id="about" className="py-20 sm:py-24 relative overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,#80808008_0%,transparent_50%)]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,#80808008_0%,transparent_50%)]" />
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808005_1px,transparent_1px),linear-gradient(to_bottom,#80808005_1px,transparent_1px)] bg-[size:64px_64px]" />
 
-      <div className="container mx-auto max-w-7xl relative z-10">
+      <div className="section-container relative z-10">
         <div className="flex items-center gap-4 sm:gap-6 mb-12 sm:mb-20">
           <div className="h-px flex-1 bg-gradient-to-r from-transparent via-foreground/20 to-foreground/40" />
           <div className="relative group">
             <div className="absolute -inset-4 bg-foreground/5 blur-xl group-hover:bg-foreground/10 transition-all duration-500" />
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center tracking-tight relative px-4">
-              About Me
-            </h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-center tracking-tight relative px-4">About Me</h2>
             <div className="absolute -bottom-3 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-foreground to-transparent" />
           </div>
           <div className="h-px flex-1 bg-gradient-to-l from-transparent via-foreground/20 to-foreground/40" />
@@ -61,19 +56,19 @@ export function About() {
           <div className="absolute -left-4 sm:-left-8 top-0 w-3 h-3 rounded-full bg-foreground animate-pulse" />
 
           <div className="space-y-6 sm:space-y-8">
-            <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-balance leading-tight bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/70">
+            <h3 className="text-2xl sm:text-3xl font-bold text-balance leading-tight bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/70">
               Computer Science Graduate Student
             </h3>
 
             <div className="h-px w-20 sm:w-32 bg-gradient-to-r from-foreground to-transparent" />
 
-            <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground leading-relaxed font-light">
+            <p className="text-base sm:text-lg text-muted-foreground leading-relaxed font-light">
               Graduate student in Computer Science with a strong focus on{" "}
               <span className="font-semibold text-foreground">Machine Learning and AI</span>, skilled in Python,
               TensorFlow, and PyTorch.
             </p>
 
-            <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed">
+            <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
               Experienced in applying data science and statistical methods, and proficient in Full-Stack Web Development
               using React.js, Node.js, and Django. Passionate about developing innovative solutions that bridge the gap
               between cutting-edge AI research and practical applications.
@@ -104,7 +99,7 @@ export function About() {
                     {skill.icon}
                   </div>
 
-                  <h4 className="font-bold text-xl sm:text-2xl md:text-3xl mb-3 sm:mb-4 group-hover:text-foreground transition-colors">
+                  <h4 className="font-bold text-lg sm:text-xl mb-3 sm:mb-4 group-hover:text-foreground transition-colors">
                     {skill.category}
                   </h4>
 

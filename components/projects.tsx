@@ -68,12 +68,12 @@ export function Projects() {
         />
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 relative">
+      <div className="section-container relative">
         {/* Section Header */}
         <div className="text-center mb-12 sm:mb-20 relative">
           <div className="inline-block relative">
             <div className="absolute -inset-4 bg-foreground/5 blur-2xl rounded-full" />
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 relative px-4">Featured Projects</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4 relative px-4">Featured Projects</h2>
           </div>
           <div className="flex items-center justify-center gap-4 mt-6 px-4">
             <div className="h-px w-12 sm:w-20 bg-gradient-to-r from-transparent to-foreground/20" />
@@ -83,16 +83,16 @@ export function Projects() {
         </div>
 
         {/* Projects Grid */}
-        <div className="space-y-6 sm:space-y-8 max-w-6xl mx-auto">
+        <div className="grid gap-6 sm:gap-8 md:grid-cols-2 max-w-5xl mx-auto">
           {projects.map((project, index) => (
             <div
               key={index}
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
-              className="group relative"
+              className="group relative h-full"
             >
               {/* Project Card */}
-              <div className="relative bg-background border-2 border-foreground/10 hover:border-foreground/30 transition-all duration-500 overflow-hidden">
+              <div className="relative flex h-full flex-col bg-background border-2 border-foreground/10 hover:border-foreground/30 transition-all duration-500 overflow-hidden">
                 {/* Hover Gradient Effect */}
                 <div
                   className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
@@ -101,24 +101,20 @@ export function Projects() {
                   }}
                 />
 
-                <div className="absolute left-0 top-4 sm:top-6 bg-foreground text-background px-3 py-1.5 sm:px-4 sm:py-2 font-mono font-bold text-xs sm:text-sm z-10">
-                  PROJECT {String(index + 1).padStart(2, "0")}
-                </div>
-
-                <div className="p-6 sm:p-8 md:p-12 pt-16 sm:pt-20 md:pt-12 relative">
-                  <div className="grid md:grid-cols-[2fr,1fr] gap-6 sm:gap-8">
+                <div className="relative flex flex-1 flex-col gap-6 p-6 sm:p-8 lg:p-10">
+                  <div className="grid gap-6 sm:gap-8 lg:grid-cols-[2fr,1fr]">
                     {/* Left Column - Content */}
                     <div className="space-y-4 sm:space-y-6">
                       {/* Title & Subtitle */}
                       <div>
-                        <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 group-hover:translate-x-2 transition-transform duration-300">
+                        <h3 className="text-xl sm:text-2xl font-bold mb-2 group-hover:translate-x-2 transition-transform duration-300">
                           {project.title}
                         </h3>
-                        <p className="text-base sm:text-lg text-muted-foreground font-medium">{project.subtitle}</p>
+                        <p className="text-sm sm:text-base text-muted-foreground font-medium">{project.subtitle}</p>
                       </div>
 
                       {/* Description */}
-                      <p className="text-muted-foreground leading-relaxed text-sm sm:text-base md:text-lg">
+                      <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
                         {project.description}
                       </p>
 
@@ -202,7 +198,7 @@ export function Projects() {
 
               {/* Connecting Line (except for last item) */}
               {index < projects.length - 1 && (
-                <div className="flex justify-center py-4">
+                <div className="flex justify-center py-4 md:hidden">
                   <div className="w-px h-8 bg-gradient-to-b from-foreground/20 to-transparent" />
                 </div>
               )}

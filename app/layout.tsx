@@ -10,8 +10,8 @@ export const metadata: Metadata = {
   title: "Portfolio - AI/ML Engineer & Data Scientist",
   description:
     "AI/ML Engineer & Data Scientist specializing in wireless communications, machine learning, and advanced analytics. Expert in TensorFlow, PyTorch, and Beyond 5G technologies.",
-  generator: "v0.app",
   keywords: ["AI", "Machine Learning", "Data Science", "Wireless Communications", "TensorFlow", "PyTorch"],
+    generator: 'v0.app'
 }
 
 export default function RootLayout({
