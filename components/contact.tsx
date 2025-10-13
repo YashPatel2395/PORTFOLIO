@@ -29,7 +29,7 @@ export function Contact() {
       icon: Linkedin,
       label: "LinkedIn",
       value: "Yashkumar K Patel",
-      href: "https://linkedin.com/in/yashkumar-k-patel",
+      href: "https://www.linkedin.com/in/yashkumarkpatel/",
     },
   ]
 
