@@ -49,7 +49,7 @@ export function Hero() {
     },
     {
       icon: Linkedin,
-      href: "https://linkedin.com/in/yashkumar-k-patel",
+      href: "https://www.linkedin.com/in/yashkumarkpatel/",
       label: "LinkedIn",
     },
   ]

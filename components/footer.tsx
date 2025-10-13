@@ -51,7 +51,7 @@ export function Footer() {
                 +1 (360) 469-9829
               </a>
               <a
-                href="https://linkedin.com/in/yashkumar-k-patel"
+                href="https://www.linkedin.com/in/yashkumarkpatel/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block text-muted-foreground hover:text-foreground transition-colors"
