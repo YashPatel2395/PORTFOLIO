@@ -1,132 +1,109 @@
-"use client"
-
-import { Mail, Phone, Github, Linkedin, Send } from "lucide-react"
-import { useState } from "react"
+import { Button } from "@/components/ui/button"
+import { Mail, Phone, Github, Linkedin, Send, Sparkles } from "lucide-react"
 
 export function Contact() {
-  const [hoveredCard, setHoveredCard] = useState<number | null>(null)
-
-  const contactInfo = [
-    {
-      icon: Mail,
-      label: "Email",
-      value: "yashpatel77667@gmail.com",
-      href: "mailto:yashpatel77667@gmail.com",
-    },
-    {
-      icon: Phone,
-      label: "Phone",
-      value: "+1 (360) 469-9829",
-      href: "tel:+13604699829",
-    },
-    {
-      icon: Github,
-      label: "GitHub",
-      value: "YashPatel2395",
-      href: "https://github.com/YashPatel2395",
-    },
-    {
-      icon: Linkedin,
-      label: "LinkedIn",
-      value: "Yashkumar K Patel",
-      href: "https://www.linkedin.com/in/yashkumarkpatel/",
-    },
-  ]
-
   return (
-    <section id="contact" className="py-20 sm:py-24 relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-[0.02]">
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: `radial-gradient(circle at 2px 2px, currentColor 1px, transparent 0)`,
-            backgroundSize: "48px 48px",
-          }}
-        />
+    <section id="contact" className="py-20 sm:py-24 md:py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      <div className="absolute top-20 left-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-20 right-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
+
+      <div className="container mx-auto max-w-4xl relative z-10">
+        <div className="text-center mb-12 sm:mb-16 md:mb-20">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/20 text-accent mb-4 sm:mb-6">
+            <Sparkles className="h-4 w-4" />
+            <span className="text-sm font-semibold">Let's connect</span>
+          </div>
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 sm:mb-6 text-balance">Get In Touch</h2>
+          <div className="w-24 h-1.5 bg-gradient-to-r from-accent via-primary to-accent mx-auto rounded-full mb-6 sm:mb-8" />
+          <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
+            I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Feel
+            free to reach out!
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mb-12 sm:mb-16">
+          <a
+            href="mailto:yashpatel77667@gmail.com"
+            className="flex items-center gap-4 sm:gap-5 p-6 sm:p-8 rounded-2xl border-2 border-border hover:border-accent hover:shadow-2xl hover:shadow-accent/20 transition-all duration-300 group bg-card/50 backdrop-blur-sm hover:-translate-y-1 relative overflow-hidden"
+          >
+            <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="relative z-10 w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-gradient-to-br from-accent/20 to-primary/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <Mail className="h-6 w-6 sm:h-8 sm:w-8 text-accent" />
+            </div>
+            <div className="relative z-10">
+              <p className="font-bold text-base sm:text-lg mb-1">Email</p>
+              <p className="text-sm sm:text-base text-muted-foreground break-all">yashpatel77667@gmail.com</p>
+            </div>
+          </a>
+
+          <a
+            href="tel:+13604699829"
+            className="flex items-center gap-4 sm:gap-5 p-6 sm:p-8 rounded-2xl border-2 border-border hover:border-accent hover:shadow-2xl hover:shadow-accent/20 transition-all duration-300 group bg-card/50 backdrop-blur-sm hover:-translate-y-1 relative overflow-hidden"
+          >
+            <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="relative z-10 w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-gradient-to-br from-accent/20 to-primary/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <Phone className="h-6 w-6 sm:h-8 sm:w-8 text-accent" />
+            </div>
+            <div className="relative z-10">
+              <p className="font-bold text-base sm:text-lg mb-1">Phone</p>
+              <p className="text-sm sm:text-base text-muted-foreground">+1 (360) 469-9829</p>
+            </div>
+          </a>
+
+          <a
+            href="https://github.com/yashkumar"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-4 sm:gap-5 p-6 sm:p-8 rounded-2xl border-2 border-border hover:border-accent hover:shadow-2xl hover:shadow-accent/20 transition-all duration-300 group bg-card/50 backdrop-blur-sm hover:-translate-y-1 relative overflow-hidden"
+          >
+            <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="relative z-10 w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-gradient-to-br from-accent/20 to-primary/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <Github className="h-6 w-6 sm:h-8 sm:w-8 text-accent" />
+            </div>
+            <div className="relative z-10">
+              <p className="font-bold text-base sm:text-lg mb-1">GitHub</p>
+              <p className="text-sm sm:text-base text-muted-foreground">github.com/yashkumar</p>
+            </div>
+          </a>
+
+          <a
+            href="https://linkedin.com/in/yashkumar"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-4 sm:gap-5 p-6 sm:p-8 rounded-2xl border-2 border-border hover:border-accent hover:shadow-2xl hover:shadow-accent/20 transition-all duration-300 group bg-card/50 backdrop-blur-sm hover:-translate-y-1 relative overflow-hidden"
+          >
+            <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="relative z-10 w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-gradient-to-br from-accent/20 to-primary/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <Linkedin className="h-6 w-6 sm:h-8 sm:w-8 text-accent" />
+            </div>
+            <div className="relative z-10">
+              <p className="font-bold text-base sm:text-lg mb-1">LinkedIn</p>
+              <p className="text-sm sm:text-base text-muted-foreground">linkedin.com/in/yashkumar</p>
+            </div>
+          </a>
+        </div>
+
+        <div className="text-center">
+          <Button
+            size="lg"
+            asChild
+            className="font-bold text-sm sm:text-base px-8 sm:px-12 py-6 sm:py-8 rounded-full shadow-2xl shadow-primary/40 hover:shadow-3xl hover:shadow-primary/50 transition-all duration-300 hover:scale-105 group"
+          >
+            <a href="mailto:yashpatel77667@gmail.com" className="flex items-center gap-2 sm:gap-3">
+              <Send className="h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-1 transition-transform duration-300" />
+              Send Me an Email
+            </a>
+          </Button>
+        </div>
       </div>
 
-      {/* Decorative Elements */}
-      <div className="absolute top-20 left-10 w-72 h-72 border border-border/20 rounded-full" />
-      <div className="absolute bottom-20 right-10 w-96 h-96 border border-border/20 rounded-full" />
-
-      <div className="section-container relative z-10 max-w-4xl">
-        {/* Section Header */}
-        <div className="text-center mb-12 sm:mb-20 relative">
-          <div className="inline-block relative">
-            <div className="absolute -inset-4 bg-foreground/5 blur-2xl rounded-full" />
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-4 sm:mb-6 relative px-4">
-              <span className="inline-block hover:scale-110 transition-transform duration-300">Let's</span>{" "}
-              <span className="inline-block hover:scale-110 transition-transform duration-300 delay-75">Connect</span>
-            </h2>
-          </div>
-          <div className="flex items-center justify-center gap-4 mb-6">
-            <div className="h-px w-12 sm:w-16 bg-gradient-to-r from-transparent to-border" />
-            <p className="text-muted-foreground text-base sm:text-lg font-mono">Get in touch</p>
-            <div className="h-px w-12 sm:w-16 bg-gradient-to-l from-transparent to-border" />
-          </div>
+      <footer className="mt-20 sm:mt-24 md:mt-32 pt-8 sm:pt-12 border-t-2 border-border/50">
+        <div className="container mx-auto max-w-6xl text-center">
+          <p className="text-sm sm:text-base text-muted-foreground">
+            © {new Date().getFullYear()} Yashkumar Patel. All rights reserved.
+          </p>
         </div>
-
-        <div className="max-w-3xl mx-auto space-y-4 sm:space-y-6">
-          {contactInfo.map((item, index) => {
-            const Icon = item.icon
-            return (
-              <a
-                key={index}
-                href={item.href}
-                target={item.href.startsWith("http") ? "_blank" : undefined}
-                rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                onMouseEnter={() => setHoveredCard(index)}
-                onMouseLeave={() => setHoveredCard(null)}
-                className="group block relative"
-              >
-                {/* Card Background Layers */}
-                <div className="absolute inset-0 bg-foreground/5 rounded-2xl transform transition-transform duration-300 group-hover:scale-[1.02]" />
-                <div className="absolute inset-0 border-2 border-border rounded-2xl transform transition-all duration-300 group-hover:border-foreground" />
-
-                {/* Hover Glow Effect */}
-                <div
-                  className={`absolute inset-0 bg-foreground/10 rounded-2xl blur-xl transition-opacity duration-300 ${hoveredCard === index ? "opacity-100" : "opacity-0"}`}
-                />
-
-                <div className="relative p-6 sm:p-8 flex items-center gap-4 sm:gap-6">
-                  {/* Icon Container */}
-                  <div className="relative">
-                    <div className="absolute inset-0 bg-foreground rounded-xl transform transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6" />
-                    <div className="relative bg-background border-2 border-foreground rounded-xl p-3 sm:p-4 transform transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6">
-                      <Icon className="w-5 h-5 sm:w-6 sm:h-6" />
-                    </div>
-                  </div>
-
-                  {/* Content */}
-                  <div className="flex-1 min-w-0">
-                    <p className="text-xs sm:text-sm font-bold text-muted-foreground mb-1 font-mono uppercase tracking-wider">
-                      {item.label}
-                    </p>
-                    <p className="text-base sm:text-lg font-bold truncate group-hover:text-foreground transition-colors">
-                      {item.value}
-                    </p>
-                  </div>
-
-                  {/* Arrow */}
-                  <Send className="w-4 h-4 sm:w-5 sm:h-5 text-muted-foreground transform transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-foreground" />
-                </div>
-
-                {/* Corner Accents */}
-                <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-foreground rounded-tl-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-foreground rounded-br-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </a>
-            )
-          })}
-        </div>
-
-        {/* Bottom Decorative Line */}
-        <div className="mt-20 flex items-center justify-center gap-4">
-          <div className="h-px flex-1 bg-gradient-to-r from-transparent via-border to-transparent" />
-          <div className="w-2 h-2 rounded-full bg-foreground animate-pulse" />
-          <div className="h-px flex-1 bg-gradient-to-r from-transparent via-border to-transparent" />
-        </div>
-      </div>
+      </footer>
     </section>
   )
 }

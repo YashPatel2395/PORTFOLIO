@@ -1,3 +1,4 @@
+import { Navigation } from "@/components/navigation"
 import { Hero } from "@/components/hero"
 import { About } from "@/components/about"
 import { Experience } from "@/components/experience"
@@ -6,12 +7,10 @@ import { Skills } from "@/components/skills"
 import { Certifications } from "@/components/certifications"
 import { Education } from "@/components/education"
 import { Contact } from "@/components/contact"
-import { Navigation } from "@/components/navigation"
-import { Footer } from "@/components/footer"
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen">
       <Navigation />
       <main>
         <Hero />
@@ -23,7 +22,6 @@ export default function Home() {
         <Education />
         <Contact />
       </main>
-      <Footer />
     </div>
   )
 }

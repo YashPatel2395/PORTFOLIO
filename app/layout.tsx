@@ -7,11 +7,10 @@ import { Suspense } from "react"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "Portfolio - AI/ML Engineer & Data Scientist",
+  title: "Yashkumar Patel - ML Engineer & Software Engineer",
   description:
-    "AI/ML Engineer & Data Scientist specializing in wireless communications, machine learning, and advanced analytics. Expert in TensorFlow, PyTorch, and Beyond 5G technologies.",
-  keywords: ["AI", "Machine Learning", "Data Science", "Wireless Communications", "TensorFlow", "PyTorch"],
-    generator: 'v0.app'
+    "Graduate student specializing in Machine Learning & AI with expertise in building scalable software solutions.",
+  generator: "v0.app",
 }
 
 export default function RootLayout({
@@ -20,8 +19,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`}>
+    <html lang="en">
+      <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable} antialiased`}>
         <Suspense fallback={null}>{children}</Suspense>
         <Analytics />
       </body>

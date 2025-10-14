@@ -1,160 +1,95 @@
 import { Card } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+import Image from "next/image"
+
+const experiences = [
+  {
+    title: "Graduate Assistant",
+    company: "SUNY Polytechnic Institute — College of Engineering",
+    location: "Utica, New York",
+    period: "Aug 2025 – Present",
+    logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/SUNY%20POLY-24BvuaZVfOkaoPDOJCgcIQDftVUyyR.jpeg",
+    responsibilities: [
+      "Developed and optimized modules for the Freedom Dashboard, a web-based platform emphasizing privacy and decentralization.",
+      "Refactored backend components to improve scalability, performance, and maintainability.",
+      "Collaborated with teams on architecture design, feature planning, and testing to enhance platform stability.",
+    ],
+  },
+  {
+    title: "Software Engineer",
+    company: "Variance InfoTech Pvt. Ltd.",
+    location: "Ahmedabad, India",
+    period: "Jun 2024 – Dec 2024",
+    logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Varience-ZAJIHDUPf7SFUK33IQEpCRk5tbC6vs.png",
+    responsibilities: [
+      "Built modular, production-ready web applications using Node.js, React.js, and Express.js.",
+      "Integrated RESTful APIs, optimized database operations, and enhanced user experience through performance tuning.",
+      "Contributed to Agile sprints, participated in code reviews, and maintained coding best practices.",
+    ],
+  },
+  {
+    title: "Full-Stack Intern",
+    company: "Arihant Satiate",
+    location: "Ahmedabad, India",
+    period: "Jan 2023 – Nov 2023",
+    logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Arihant%20Satiate-PW5pKwdo6GaiW4zF1k9oJ3x7X3qJmt.jpeg",
+    responsibilities: [
+      "Designed responsive UI components and layouts for improved functionality and accessibility.",
+      "Enhanced cross-platform performance and modularized front-end components.",
+      "Strengthened technical proficiency in React, Tailwind CSS, TypeScript, Node.js, MySQL, and TypeORM.",
+    ],
+  },
+]
 
 export function Experience() {
-  const experiences = [
-    {
-      title: "Graduate Assistant",
-      period: "August 2025 - Present",
-      company: "SUNY Polytechnic Institute | College of Engineering",
-      location: "Utica, New York",
-      highlights: [
-        {
-          icon: "🌐",
-          title: "Freedom Dashboard Development",
-          description:
-            "Contributing to the development and enhancement of Freedom Dashboard, a web-based platform focused on privacy and decentralization.",
-        },
-        {
-          icon: "🔧",
-          title: "Website Features & Maintenance",
-          description:
-            "Designing, updating, and maintaining core website features, ensuring secure, scalable, and user-friendly modules.",
-        },
-        {
-          icon: "🐛",
-          title: "Technical Improvements & Testing",
-          description:
-            "Collaborating on technical improvements, debugging, and testing to support system reliability and performance.",
-        },
-        {
-          icon: "📚",
-          title: "Modern Web Technologies",
-          description:
-            "Expanding expertise in modern web technologies and applying software engineering best practices while supporting ongoing academic research.",
-        },
-      ],
-    },
-    {
-      title: "Software Engineer",
-      period: "June 2024 - December 2024",
-      company: "Variance InfoTech Pvt Ltd",
-      location: "Ahmedabad, India",
-      highlights: [
-        {
-          icon: "🏗️",
-          title: "Scalable Application Development",
-          description:
-            "Designed and developed scalable, high-performance applications while following clean architecture and robust coding practices.",
-        },
-        {
-          icon: "⚡",
-          title: "API & Database Optimization",
-          description:
-            "Implemented and optimized APIs, databases, and modular components, delivering production-ready solutions across the SDLC.",
-        },
-        {
-          icon: "🤝",
-          title: "Agile Team Collaboration",
-          description:
-            "Collaborated in Agile teams, contributing to sprint planning, code reviews, debugging, and feature delivery.",
-        },
-        {
-          icon: "📈",
-          title: "Performance Tuning",
-          description:
-            "Improved system efficiency and user experience through performance tuning, innovative enhancements, and strict code quality standards.",
-        },
-      ],
-    },
-    {
-      title: "Full-Stack Intern",
-      period: "January 2023 - November 2023",
-      company: "Arihant Satiate",
-      location: "Ahmedabad, India",
-      highlights: [
-        {
-          icon: "💻",
-          title: "Web Platform Development",
-          description:
-            "Contributed to the development of the company's core web platform, focusing on building intuitive and responsive user interfaces.",
-        },
-        {
-          icon: "🎨",
-          title: "Front-End Development",
-          description:
-            "Spearheaded front-end development initiatives to improve functionality and performance with responsive layouts for seamless cross-device experiences.",
-        },
-        {
-          icon: "👥",
-          title: "Cross-Functional Collaboration",
-          description:
-            "Collaborated with cross-functional teams to deliver features under tight deadlines and supported successful platform launches.",
-        },
-        {
-          icon: "🛠️",
-          title: "Technology Stack Expertise",
-          description:
-            "Strengthened expertise in HTML, CSS, JavaScript, React, Tailwind CSS, and TypeScript, with additional exposure to Node.js, MySQL, and TypeORM.",
-        },
-      ],
-    },
-  ]
-
   return (
-    <section id="experience" className="py-20 sm:py-24 bg-muted/20 relative">
-      <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_48%,#80808005_49%,#80808005_51%,transparent_52%)] bg-[size:20px_20px]" />
-
-      <div className="section-container relative z-10">
-        <div className="flex items-center gap-6 mb-16">
-          <div className="h-px flex-1 bg-gradient-to-r from-transparent via-border to-border" />
-          <div className="relative">
-            <h2 className="text-3xl md:text-4xl font-bold text-center tracking-tight">Experience</h2>
-            <div className="absolute -bottom-2 left-0 right-0 h-1 bg-foreground/10" />
-          </div>
-          <div className="h-px flex-1 bg-gradient-to-l from-transparent via-border to-border" />
+    <section id="experience" className="py-20 sm:py-24 md:py-32 px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto max-w-6xl">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 sm:mb-6 text-balance">Experience</h2>
+          <div className="w-24 h-1.5 bg-gradient-to-r from-accent to-primary mx-auto rounded-full" />
         </div>
 
-        <div className="space-y-12 relative">
-          <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-gradient-to-b from-foreground via-foreground/50 to-transparent hidden md:block ml-6" />
-
+        <div className="space-y-8 sm:space-y-10">
           {experiences.map((exp, index) => (
             <Card
               key={index}
-              className="p-8 md:p-10 hover:shadow-2xl transition-all duration-500 border-2 hover:border-foreground/30 relative md:ml-16 group overflow-hidden"
+              className="p-6 sm:p-8 md:p-10 hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 border-2 hover:border-accent/30 bg-card/50 backdrop-blur-sm group"
             >
-              <div className="absolute -left-20 top-10 w-12 h-12 rounded-full bg-background border-4 border-foreground hidden md:flex items-center justify-center group-hover:scale-125 transition-transform duration-300">
-                <div className="w-4 h-4 rounded-full bg-foreground animate-pulse" />
+              <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-6 sm:mb-8 gap-3 sm:gap-4">
+                <div className="flex items-start gap-4 sm:gap-6">
+                  <div className="flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 relative rounded-xl overflow-hidden bg-white p-2 shadow-lg ring-2 ring-accent/20 group-hover:ring-accent/40 transition-all duration-300">
+                    <Image
+                      src={exp.logo || "/placeholder.svg"}
+                      alt={`${exp.company} logo`}
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl sm:text-3xl font-bold mb-2 sm:mb-3 group-hover:text-accent transition-colors duration-300">
+                      {exp.title}
+                    </h3>
+                    <p className="text-lg sm:text-xl text-muted-foreground mb-2">{exp.company}</p>
+                    <p className="text-sm sm:text-base text-muted-foreground">📍 {exp.location}</p>
+                  </div>
+                </div>
+                <Badge
+                  variant="secondary"
+                  className="text-sm sm:text-base px-4 sm:px-6 py-1.5 sm:py-2 shadow-md self-start whitespace-nowrap"
+                >
+                  {exp.period}
+                </Badge>
               </div>
 
-              <div className="absolute top-0 right-0 w-24 h-24 bg-foreground/5 -mr-12 -mt-12 rotate-45 group-hover:scale-150 transition-transform duration-500" />
-
-              <div className="mb-8 relative z-10">
-                <h3 className="text-2xl font-bold mb-3 group-hover:text-foreground/90 transition-colors leading-tight">
-                  {exp.title}
-                </h3>
-                {exp.period && (
-                  <div className="inline-block px-4 py-1.5 bg-foreground text-background text-sm font-bold mb-3">
-                    {exp.period}
-                  </div>
-                )}
-                <p className="text-base text-muted-foreground font-medium">
-                  {exp.company} • {exp.location}
-                </p>
-              </div>
-
-              <div className="space-y-8 relative z-10">
-                {exp.highlights.map((highlight, hIndex) => (
-                  <div key={hIndex} className="flex gap-6 group/item">
-                    <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center bg-muted rounded-lg group-hover/item:bg-foreground group-hover/item:text-background transition-all duration-300">
-                      <span className="text-2xl">{highlight.icon}</span>
-                    </div>
-                    <div className="flex-1">
-                      <h4 className="font-bold text-base mb-3 leading-tight">{highlight.title}</h4>
-                      <p className="text-sm text-muted-foreground leading-relaxed">{highlight.description}</p>
-                    </div>
-                  </div>
+              <ul className="space-y-3 sm:space-y-4">
+                {exp.responsibilities.map((resp, idx) => (
+                  <li key={idx} className="flex gap-3 sm:gap-4 group/item">
+                    <div className="flex-shrink-0 w-2 h-2 rounded-full bg-accent mt-2 group-hover/item:scale-150 transition-transform duration-300" />
+                    <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">{resp}</p>
+                  </li>
                 ))}
-              </div>
+              </ul>
             </Card>
           ))}
         </div>

@@ -1,194 +1,95 @@
 import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Award, CheckCircle2, Star, ExternalLink } from "lucide-react"
+import Image from "next/image"
+
+const certifications = [
+  {
+    title: "Machine Learning Specialization",
+    issuer: "Coursera / Stanford Online",
+    year: "2025",
+    type: "Professional Certificate",
+    logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/stanford-online.png-F5O4ZCJVN1J68cfgfJrVJHDxwSftd5.avif",
+    description:
+      "Gained hands-on experience in linear/logistic regression, decision trees, and neural networks using Python and TensorFlow. Comprehensive specialization covering supervised & unsupervised learning, deep learning basics, and model evaluation.",
+    courses: ["Advanced Learning Algorithms", "Supervised Machine Learning: Regression and Classification"],
+  },
+  {
+    title: "Mathematics for Machine Learning and Data Science",
+    issuer: "DeepLearning.AI",
+    year: "2025",
+    type: "Professional Certificate",
+    logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Deeplearning.png-iwzOoUCy7L7NLCksavUPOoAbELNcup.avif",
+    description:
+      "Applied concepts of linear algebra, calculus, and probability to strengthen foundations in ML model development. Comprehensive coverage of mathematical foundations essential for understanding and implementing machine learning algorithms.",
+    courses: ["Linear Algebra", "Calculus", "Probability & Statistics"],
+  },
+]
 
 export function Certifications() {
-  const certifications = [
-    {
-      title: "Machine Learning Specialization",
-      issuer: "Coursera / Stanford Online",
-      date: "2025",
-      description:
-        "Comprehensive specialization covering supervised & unsupervised learning, deep learning basics, and model evaluation. Hands-on projects included regression, classification, clustering, and recommender systems using Python and scikit-learn.",
-      childCertificates: [
-        "Advanced Learning Algorithms",
-        "Supervised Machine Learning: Regression and Classification",
-        "Unsupervised Learning, Recommenders, Reinforcement Learning",
-      ],
-      skills: [
-        "Supervised Learning",
-        "Unsupervised Learning",
-        "Deep Learning",
-        "Model Evaluation",
-        "Python",
-        "scikit-learn",
-      ],
-      certificateUrl: "https://www.coursera.org/account/accomplishments/specialization/YOUR_CERT_ID", // Replace with actual certificate URL
-    },
-    {
-      title: "Mathematics for Machine Learning and Data Science",
-      issuer: "Coursera / DeepLearning.AI",
-      date: "2025",
-      description:
-        "Complete mathematics foundation for machine learning covering linear algebra, calculus, and statistics. Applied concepts to Principal Component Analysis (PCA), dimensionality reduction, and optimization in ML.",
-      childCertificates: [
-        "Linear Algebra for Machine Learning and Data Science",
-        "Calculus for Machine Learning and Data Science",
-        "Probability & Statistics for Machine Learning & Data Science",
-      ],
-      skills: ["Linear Algebra", "Calculus", "Statistics", "PCA", "Dimensionality Reduction", "Optimization"],
-      certificateUrl: "https://www.coursera.org/account/accomplishments/specialization/YOUR_CERT_ID", // Replace with actual certificate URL
-    },
-  ]
-
   return (
-    <section id="certifications" className="py-20 sm:py-24 relative overflow-hidden">
-      <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_48%,#80808003_49%,#80808003_51%,transparent_52%),linear-gradient(-45deg,transparent_48%,#80808003_49%,#80808003_51%,transparent_52%)] bg-[size:20px_20px]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,#80808005_0%,transparent_70%)]" />
-
-      <div className="section-container relative z-10">
-        <div className="flex items-center gap-6 mb-20">
-          <div className="h-px flex-1 bg-gradient-to-r from-transparent via-foreground/20 to-foreground/40" />
-          <div className="relative group">
-            <div className="absolute -inset-4 bg-foreground/5 blur-xl group-hover:bg-foreground/10 transition-all duration-500" />
-            <div className="flex items-center gap-4">
-              <Award className="w-8 h-8" />
-              <h2 className="text-3xl md:text-4xl font-bold text-center tracking-tight relative">Certifications</h2>
-              <Award className="w-8 h-8" />
-            </div>
-            <div className="absolute -bottom-3 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-foreground to-transparent" />
-          </div>
-          <div className="h-px flex-1 bg-gradient-to-l from-transparent via-foreground/20 to-foreground/40" />
+    <section
+      id="certifications"
+      className="py-20 sm:py-24 md:py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background to-muted/30"
+    >
+      <div className="container mx-auto max-w-6xl">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 sm:mb-6 text-balance">Certifications</h2>
+          <p className="text-lg sm:text-xl text-muted-foreground">
+            Professional certifications demonstrating expertise in Machine Learning and AI fundamentals
+          </p>
         </div>
 
-        <p className="text-center text-base text-muted-foreground mb-16 max-w-3xl mx-auto leading-relaxed">
-          Professional certifications demonstrating expertise in Machine Learning and AI fundamentals
-        </p>
-
-        <div className="space-y-16">
+        <div className="space-y-6 sm:space-y-8">
           {certifications.map((cert, index) => (
-            <div key={index} className="relative">
-              {index < certifications.length - 1 && (
-                <div className="absolute left-1/2 -bottom-16 w-px h-16 bg-gradient-to-b from-foreground/30 to-transparent" />
-              )}
-
-              <Card className="p-0 hover:shadow-2xl transition-all duration-500 border-4 border-double hover:border-foreground/60 group relative overflow-hidden bg-background">
-                {/* Certificate decorative border pattern */}
-                <div
-                  className="absolute inset-0 border-8 border-transparent"
-                  style={{
-                    borderImage:
-                      "repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(128,128,128,0.1) 10px, rgba(128,128,128,0.1) 20px) 8",
-                  }}
-                />
-
-                {/* Top ribbon banner */}
-                <div className="relative bg-foreground text-background px-6 py-6 sm:px-10 overflow-hidden">
-                  <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,0.1)_50%,transparent_75%)] bg-[size:20px_20px]" />
-                  <div className="relative z-10 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-                    <div className="flex items-center gap-4">
-                      <div className="w-16 h-16 rounded-full bg-background text-foreground flex items-center justify-center border-4 border-background/20">
-                        <Award className="w-8 h-8" />
-                      </div>
-                      <div>
-                        <p className="text-sm font-bold uppercase tracking-wider opacity-90">
-                          Professional Certificate
-                        </p>
-                        <p className="text-lg font-bold">{cert.issuer}</p>
-                      </div>
-                    </div>
-                    <Badge className="bg-background text-foreground text-sm sm:text-base px-4 py-2 sm:px-6 sm:py-3 font-bold border-2 border-background/20">
-                      {cert.date}
-                    </Badge>
-                  </div>
-                  {/* Ribbon tails */}
-                  <div className="absolute -bottom-4 left-0 w-0 h-0 border-l-[30px] border-l-transparent border-t-[16px] border-t-foreground/80" />
-                  <div className="absolute -bottom-4 right-0 w-0 h-0 border-r-[30px] border-r-transparent border-t-[16px] border-t-foreground/80" />
+            <Card
+              key={index}
+              className="p-6 sm:p-8 md:p-10 hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 border-2 hover:border-accent/30 bg-card/50 backdrop-blur-sm group"
+            >
+              <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
+                <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-xl sm:rounded-2xl bg-white flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-md ring-2 ring-accent/10 group-hover:ring-accent/30 p-2">
+                  <Image
+                    src={cert.logo || "/placeholder.svg"}
+                    alt={`${cert.issuer} logo`}
+                    width={64}
+                    height={64}
+                    className="w-full h-full object-contain"
+                  />
                 </div>
-
-                <div className="relative p-6 sm:p-8 md:p-12">
-                  {/* Certificate seal/badge in corner */}
-                  <div className="absolute top-8 right-8 hidden h-24 w-24 rounded-full bg-foreground/5 border-4 border-dashed border-foreground/20 md:flex items-center justify-center group-hover:rotate-12 transition-transform duration-500">
-                    <div className="w-16 h-16 rounded-full bg-foreground text-background flex items-center justify-center">
-                      <Star className="w-8 h-8 fill-current" />
-                    </div>
-                  </div>
-
-                  <div className="relative z-10 md:pr-32">
-                    <h3 className="text-2xl md:text-3xl font-bold mb-6 group-hover:text-foreground/90 transition-colors leading-tight text-balance">
-                      {cert.title}
-                    </h3>
-
-                    {/* Decorative divider */}
-                    <div className="flex items-center gap-4 my-8">
-                      <div className="w-3 h-3 rotate-45 bg-foreground/30" />
-                      <div className="h-px flex-1 bg-gradient-to-r from-foreground/40 via-foreground/20 to-transparent" />
-                      <div className="w-3 h-3 rotate-45 bg-foreground/30" />
-                    </div>
-
-                    <p className="text-base text-muted-foreground leading-relaxed mb-8 sm:mb-10">{cert.description}</p>
-
-                    {/* Included certificates with checkmarks */}
-                    <div className="mb-8 sm:mb-10 bg-foreground/5 p-5 sm:p-6 rounded-lg border-2 border-foreground/10">
-                      <h4 className="font-bold mb-5 text-lg flex items-center gap-3">
-                        <CheckCircle2 className="w-6 h-6" />
-                        Included Certificates
-                      </h4>
-                      <div className="grid gap-4">
-                        {cert.childCertificates.map((childCert, childIndex) => (
-                          <div
-                            key={childIndex}
-                            className="flex items-start gap-4 p-4 rounded-lg bg-background border-l-4 border-foreground/30 hover:border-foreground hover:bg-foreground/5 transition-all duration-300 group/child"
-                          >
-                            <div className="w-8 h-8 rounded-full bg-foreground text-background flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">
-                              <CheckCircle2 className="w-5 h-5" />
-                            </div>
-                            <p className="text-base font-medium group-hover/child:text-foreground transition-colors flex-1">
-                              {childCert}
-                            </p>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-
-                    {/* Skills as credential badges */}
+                <div className="flex-1">
+                  <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-3 sm:mb-4 gap-3">
                     <div>
-                      <h4 className="font-bold mb-5 text-lg flex items-center gap-3">
-                        <Star className="w-6 h-6" />
-                        Verified Skills
-                      </h4>
-                      <div className="flex flex-wrap gap-3">
-                        {cert.skills.map((skill, skillIndex) => (
-                          <Badge
-                            key={skillIndex}
-                            variant="outline"
-                            className="px-4 py-2 text-xs sm:text-sm hover:bg-foreground hover:text-background transition-all duration-300 cursor-default font-bold border-2 hover:scale-105"
-                          >
-                            {skill}
-                          </Badge>
-                        ))}
-                      </div>
+                      <h3 className="text-2xl sm:text-3xl font-bold mb-2 group-hover:text-accent transition-colors duration-300">
+                        {cert.title}
+                      </h3>
+                      <p className="text-base sm:text-lg text-muted-foreground">{cert.issuer}</p>
                     </div>
-
-                    {/* View Certificate button */}
-                    <div className="mt-8">
-                      <a
-                        href={cert.certificateUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-3 px-6 py-3 sm:px-8 sm:py-4 bg-foreground text-background hover:bg-foreground/90 transition-all duration-300 font-bold text-sm sm:text-base group/cert border-4 border-foreground hover:scale-105"
-                      >
-                        <ExternalLink className="w-5 h-5 group-hover/cert:rotate-45 transition-transform" />
-                        View Certificate
-                      </a>
+                    <div className="flex gap-2 sm:gap-3 flex-wrap">
+                      <Badge variant="secondary" className="text-sm sm:text-base px-3 sm:px-4 py-1 sm:py-1.5">
+                        {cert.type}
+                      </Badge>
+                      <Badge variant="outline" className="text-sm sm:text-base px-3 sm:px-4 py-1 sm:py-1.5">
+                        {cert.year}
+                      </Badge>
                     </div>
                   </div>
-
-                  {/* Bottom decorative border */}
-                  <div className="absolute bottom-0 left-0 right-0 h-4 bg-gradient-to-r from-foreground/10 via-foreground/20 to-foreground/10" />
+                  <p className="text-muted-foreground leading-relaxed mb-4 sm:mb-6 text-sm sm:text-base">
+                    {cert.description}
+                  </p>
+                  <div className="flex flex-wrap gap-2 sm:gap-3 items-center">
+                    <span className="text-sm sm:text-base font-semibold">Included Certificates:</span>
+                    {cert.courses.map((course, idx) => (
+                      <Badge
+                        key={idx}
+                        variant="secondary"
+                        className="font-normal text-xs sm:text-sm px-3 sm:px-4 py-1 sm:py-1.5"
+                      >
+                        {course}
+                      </Badge>
+                    ))}
+                  </div>
                 </div>
-              </Card>
-            </div>
+              </div>
+            </Card>
           ))}
         </div>
       </div>

@@ -1,113 +1,90 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { cn } from "@/lib/utils"
+import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 
+const navItems = [
+  { name: "Home", href: "#home" },
+  { name: "About", href: "#about" },
+  { name: "Experience", href: "#experience" },
+  { name: "Projects", href: "#projects" },
+  { name: "Skills", href: "#skills" },
+  { name: "Certifications", href: "#certifications" },
+  { name: "Education", href: "#education" },
+  { name: "Contact", href: "#contact" },
+]
+
 export function Navigation() {
-  const [activeSection, setActiveSection] = useState("home")
-  const [scrolled, setScrolled] = useState(false)
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50)
-
-      const sections = ["home", "about", "experience", "projects", "skills", "certifications", "education", "contact"]
-      const scrollPosition = window.scrollY + 100
-
-      for (const section of sections) {
-        const element = document.getElementById(section)
-        if (element) {
-          const { offsetTop, offsetHeight } = element
-          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
-            setActiveSection(section)
-            break
-          }
-        }
-      }
+      setIsScrolled(window.scrollY > 10)
     }
-
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId)
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
-    }
-    setMobileMenuOpen(false)
+  const handleLinkClick = () => {
+    setIsMobileMenuOpen(false)
   }
 
   return (
     <nav
-      className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        scrolled
-          ? "bg-background/98 backdrop-blur-xl border-b-2 border-border shadow-lg"
-          : "bg-background/95 backdrop-blur-md border-b border-border/50",
-      )}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        isScrolled
+          ? "bg-background/80 backdrop-blur-xl border-b border-border/50 shadow-lg shadow-primary/5"
+          : "bg-transparent"
+      }`}
     >
-      <div className="section-container py-4 sm:py-5">
-        <div className="flex items-center justify-between">
-          <button
-            onClick={() => scrollToSection("home")}
-            className="text-xl sm:text-2xl font-bold font-mono hover:opacity-70 transition-all border-2 border-foreground px-3 py-1.5 sm:px-4 sm:py-2 hover:bg-foreground hover:text-background"
-          >
-            YP
-          </button>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16 sm:h-20">
+          <a href="#home" className="flex items-center group">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 border-2 border-primary flex items-center justify-center font-bold text-sm sm:text-base rounded-lg bg-primary/5 group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
+              YP
+            </div>
+          </a>
 
-          <div className="hidden lg:flex gap-6 xl:gap-8">
-            {["home", "about", "experience", "projects", "skills", "certifications", "education", "contact"].map(
-              (section) => (
-                <button
-                  key={section}
-                  onClick={() => scrollToSection(section)}
-                  className={cn(
-                    "text-sm font-bold transition-all hover:text-foreground capitalize relative group tracking-wide",
-                    activeSection === section ? "text-foreground" : "text-muted-foreground",
-                  )}
-                >
-                  {section}
-                  <span
-                    className={cn(
-                      "absolute -bottom-1 left-0 h-0.5 bg-foreground transition-all duration-300",
-                      activeSection === section ? "w-full" : "w-0 group-hover:w-full",
-                    )}
-                  />
-                </button>
-              ),
-            )}
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center gap-2">
+            {navItems.map((item) => (
+              <Button
+                key={item.name}
+                variant="ghost"
+                size="sm"
+                asChild
+                className="text-sm font-medium hover:text-accent hover:bg-accent/10 transition-all duration-300"
+              >
+                <a href={item.href}>{item.name}</a>
+              </Button>
+            ))}
           </div>
 
           <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 hover:bg-foreground/10 transition-colors rounded-lg"
+            className="md:hidden p-2 rounded-lg hover:bg-accent/10 transition-colors"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >
-            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
 
-        {mobileMenuOpen && (
-          <div className="lg:hidden mt-4 pb-4 border-t border-border pt-4 space-y-2">
-            {["home", "about", "experience", "projects", "skills", "certifications", "education", "contact"].map(
-              (section) => (
-                <button
-                  key={section}
-                  onClick={() => scrollToSection(section)}
-                  className={cn(
-                    "w-full text-left px-4 py-3 rounded-lg font-bold transition-all capitalize",
-                    activeSection === section
-                      ? "bg-foreground text-background"
-                      : "text-muted-foreground hover:bg-foreground/10 hover:text-foreground",
-                  )}
+        {isMobileMenuOpen && (
+          <div className="md:hidden py-4 border-t border-border/50 bg-background/95 backdrop-blur-xl">
+            <div className="flex flex-col gap-2">
+              {navItems.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  onClick={handleLinkClick}
+                  className="px-4 py-3 text-base font-medium hover:text-accent hover:bg-accent/10 rounded-lg transition-all duration-300"
                 >
-                  {section}
-                </button>
-              ),
-            )}
+                  {item.name}
+                </a>
+              ))}
+            </div>
           </div>
         )}
       </div>
