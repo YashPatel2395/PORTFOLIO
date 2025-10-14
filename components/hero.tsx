@@ -3,6 +3,88 @@
 import { Button } from "@/components/ui/button"
 import { Mail, Phone, Github, Linkedin, ChevronDown, Sparkles, ArrowRight, Download } from "lucide-react"
 
+const generateResumePDF = () => {
+  // Create a simple downloadable text version
+  const resumeContent = `YASHKUMAR KAMLESHKUMAR PATEL
+Email: yashpatel77667@gmail.com | Phone: +1 (360) 469-9829
+Website: yashkumar.dev | LinkedIn: linkedin.com/in/yashkumarkpatel | GitHub: github.com/YashPatel2395
+
+SUMMARY
+Results-driven Software Engineer with a strong foundation in Python, JavaScript, and full-stack web development. Experienced in designing scalable systems using React.js, Node.js, and Django, integrating REST APIs, and managing relational and NoSQL databases. Proficient in cloud deployment on AWS/Vercel, software design principles, and Agile collaboration. Skilled in applying data structures, algorithms, and machine learning concepts to build efficient, maintainable, and high-performing applications.
+
+EXPERIENCE
+
+SUNY Polytechnic Institute — College of Engineering
+Graduate Assistant | Utica, New York | Aug 2025 – Present
+• Developed and optimized modules for the Freedom Dashboard, a web-based platform emphasizing privacy and decentralization.
+• Refactored backend components to improve scalability, performance, and maintainability.
+• Collaborated with teams on architecture design, feature planning, and testing to enhance platform stability.
+
+Variance InfoTech Pvt. Ltd.
+Software Engineer | Ahmedabad, India | Jun 2024 – Dec 2024
+• Built modular, production-ready web applications using Node.js, React.js, and Express.js.
+• Integrated RESTful APIs, optimized database operations, and enhanced user experience through performance tuning.
+• Contributed to Agile sprints, participated in code reviews, and maintained coding best practices.
+
+Arihant Satiate
+Full-Stack Intern | Ahmedabad, India | Jan 2023 – Nov 2023
+• Designed responsive UI components and layouts for improved functionality and accessibility.
+• Enhanced cross-platform performance and modularized front-end components.
+• Strengthened technical proficiency in React, Tailwind CSS, TypeScript, Node.js, MySQL, and TypeORM.
+
+PROJECTS
+
+AIVEST — AI-driven Stock Trading Assistant | Mar 2025 – Apr 2025
+Tech: React.js, Node.js, ChatGPT API, Finage API, TensorFlow, RSI, MACD, Bollinger Bands
+• Built an AI-powered stock trading platform integrating technical indicators with ChatGPT-based sentiment analysis.
+• Implemented real-time data visualization, backtesting, and predictive analytics for strategy evaluation.
+
+BlockCerti — Digital Credential Issuer & Verifier | Jan 2023 – Nov 2023
+Tech: Blockchain, React.js, Node.js, Web3, Express.js, Tailwind CSS, ORMs, Modular API Design, MySQL
+• Engineered a decentralized credential verification system using blockchain for secure certificate management.
+• Designed privacy-preserving architecture storing only hashed data on-chain with off-chain metadata.
+
+ConnectAssist — Community Assistance Platform | Oct 2023
+Tech: React.js, Node.js, Express, MySQL
+• Developed a task-based platform connecting local users with verified service providers.
+• Built secure backend APIs, profile management, and real-time messaging for seamless communication.
+
+SKILLS
+Languages: Python, JavaScript, Java, C++, C, HTML, CSS, TypeScript
+Frameworks: React.js, Node.js, Express.js, Django, Flask, Tailwind CSS
+Databases: MySQL, PostgreSQL, MongoDB, SQLite
+Tools: Git, Docker, Postman, Vercel, Jupyter, Google Colab
+Data/ML: NumPy, Pandas, scikit-learn, TensorFlow, PyTorch, Matplotlib, Feature Engineering, Model Evaluation
+Concepts: REST APIs, WebSockets, CI/CD, Cloud Deployment, Agile, OOP, ORM, Modular API Design
+
+EDUCATION
+
+State University of New York Polytechnic Institute | Jan 2025 – Present
+Master of Science in Computer Science
+
+GLS University | Apr 2021 – May 2024
+Bachelor of Computer Applications
+
+CERTIFICATES
+
+Machine Learning Specialization — Stanford Online / Coursera (2025)
+Gained hands-on experience in linear/logistic regression, decision trees, and neural networks using Python and TensorFlow.
+
+Mathematics for Machine Learning and Data Science — DeepLearning.AI (2025)
+Applied concepts of linear algebra, calculus, and probability to strengthen foundations in ML model development.`
+
+  // Create blob and download
+  const blob = new Blob([resumeContent], { type: "text/plain" })
+  const url = window.URL.createObjectURL(blob)
+  const link = document.createElement("a")
+  link.href = url
+  link.download = "Yashkumar_Patel_Resume.pdf"
+  document.body.appendChild(link)
+  link.click()
+  document.body.removeChild(link)
+  window.URL.revokeObjectURL(url)
+}
+
 export function Hero() {
   return (
     <section
@@ -135,7 +217,12 @@ export function Hero() {
                 asChild
                 className="h-10 w-10 sm:h-12 sm:w-12 rounded-full hover:bg-primary hover:text-primary-foreground hover:border-primary hover:scale-110 transition-all duration-300 bg-card/50 backdrop-blur-sm border-2 shadow-lg hover:shadow-xl"
               >
-                <a href="https://github.com/yashkumar" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <a
+                  href="https://github.com/YashPatel2395/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub"
+                >
                   <Github className="h-4 w-4 sm:h-5 sm:w-5" />
                 </a>
               </Button>
@@ -146,7 +233,7 @@ export function Hero() {
                 className="h-10 w-10 sm:h-12 sm:w-12 rounded-full hover:bg-primary hover:text-primary-foreground hover:border-primary hover:scale-110 transition-all duration-300 bg-card/50 backdrop-blur-sm border-2 shadow-lg hover:shadow-xl"
               >
                 <a
-                  href="https://linkedin.com/in/yashkumar"
+                  href="https://www.linkedin.com/in/yashkumarkpatel/"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="LinkedIn"
@@ -174,13 +261,11 @@ export function Hero() {
               <Button
                 size="lg"
                 variant="outline"
-                asChild
-                className="font-bold text-sm sm:text-base px-6 sm:px-8 py-5 sm:py-6 rounded-full hover:bg-secondary transition-all duration-300 bg-card/50 backdrop-blur-sm border-2 shadow-lg hover:shadow-xl hover:scale-105 group"
+                onClick={generateResumePDF}
+                className="font-bold text-sm sm:text-base px-6 sm:px-8 py-5 sm:py-6 rounded-full hover:bg-accent hover:text-accent-foreground hover:border-accent transition-all duration-300 bg-card/50 backdrop-blur-sm border-2 shadow-lg hover:shadow-xl hover:scale-105 group"
               >
-                <a href="/resume.pdf" download className="flex items-center gap-2">
-                  <Download className="h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-y-0.5 transition-transform duration-300" />
-                  Download Resume
-                </a>
+                <Download className="h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-y-0.5 transition-transform duration-300" />
+                Download Resume
               </Button>
             </div>
           </div>

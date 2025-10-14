@@ -51,7 +51,7 @@ export function Contact() {
           </a>
 
           <a
-            href="https://github.com/yashkumar"
+            href="https://github.com/YashPatel2395/"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-4 sm:gap-5 p-6 sm:p-8 rounded-2xl border-2 border-border hover:border-accent hover:shadow-2xl hover:shadow-accent/20 transition-all duration-300 group bg-card/50 backdrop-blur-sm hover:-translate-y-1 relative overflow-hidden"
@@ -62,12 +62,12 @@ export function Contact() {
             </div>
             <div className="relative z-10">
               <p className="font-bold text-base sm:text-lg mb-1">GitHub</p>
-              <p className="text-sm sm:text-base text-muted-foreground">github.com/yashkumar</p>
+              <p className="text-sm sm:text-base text-muted-foreground">github.com/YashPatel2395</p>
             </div>
           </a>
 
           <a
-            href="https://linkedin.com/in/yashkumar"
+            href="https://www.linkedin.com/in/yashkumarkpatel/"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-4 sm:gap-5 p-6 sm:p-8 rounded-2xl border-2 border-border hover:border-accent hover:shadow-2xl hover:shadow-accent/20 transition-all duration-300 group bg-card/50 backdrop-blur-sm hover:-translate-y-1 relative overflow-hidden"
@@ -78,7 +78,7 @@ export function Contact() {
             </div>
             <div className="relative z-10">
               <p className="font-bold text-base sm:text-lg mb-1">LinkedIn</p>
-              <p className="text-sm sm:text-base text-muted-foreground">linkedin.com/in/yashkumar</p>
+              <p className="text-sm sm:text-base text-muted-foreground">linkedin.com/in/yashkumarkpatel</p>
             </div>
           </a>
         </div>
