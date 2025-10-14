@@ -111,7 +111,7 @@ export function Hero() {
                 <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-accent/20 to-primary/20 p-1">
                   <div className="relative w-full aspect-[4/5] rounded-[22px] overflow-hidden bg-background">
                     <img
-                      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/82716DE8-F6B0-4A3F-B681-27799BDD7934_4_5005_c-q7z9luBlzW6DK37NIEcYwd7KCAvDjX.jpeg"
+                      src="/Self.jpeg"
                       alt="Yashkumar Patel"
                       className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                     />

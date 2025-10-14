@@ -20,7 +20,7 @@ export function Projects() {
       icon: TrendingUp,
       gradient: "from-blue-500/20 via-cyan-500/20 to-teal-500/20",
       image:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-10-13%20at%207.23.07%E2%80%AFPM-QJyaieN9IDhXXbuAX8894A314cH7je.png",
+        "/AIVEST.png",
     },
     {
       title: "BlockCerti",
@@ -48,7 +48,7 @@ export function Projects() {
       icon: Shield,
       gradient: "from-purple-500/20 via-violet-500/20 to-indigo-500/20",
       image:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-10-13%20at%207.26.07%E2%80%AFPM-2YTeKazJaTtNYQhsuWMZVBeKR2qWxf.png",
+        "/Blockcerti.png",
     },
     {
       title: "ConnectAssist",

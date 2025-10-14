@@ -8,7 +8,7 @@ const certifications = [
     issuer: "Coursera / Stanford Online",
     year: "2025",
     type: "Professional Certificate",
-    logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/stanford-online.png-F5O4ZCJVN1J68cfgfJrVJHDxwSftd5.avif",
+    logo: "/stanford-online.png",
     description:
       "Gained hands-on experience in linear/logistic regression, decision trees, and neural networks using Python and TensorFlow. Comprehensive specialization covering supervised & unsupervised learning, deep learning basics, and model evaluation.",
     courses: ["Advanced Learning Algorithms", "Supervised Machine Learning: Regression and Classification"],
@@ -18,7 +18,7 @@ const certifications = [
     issuer: "DeepLearning.AI",
     year: "2025",
     type: "Professional Certificate",
-    logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Deeplearning.png-iwzOoUCy7L7NLCksavUPOoAbELNcup.avif",
+    logo: "/Deeplearning.png",
     description:
       "Applied concepts of linear algebra, calculus, and probability to strengthen foundations in ML model development. Comprehensive coverage of mathematical foundations essential for understanding and implementing machine learning algorithms.",
     courses: ["Linear Algebra", "Calculus", "Probability & Statistics"],

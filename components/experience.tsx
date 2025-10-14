@@ -8,7 +8,7 @@ const experiences = [
     company: "SUNY Polytechnic Institute — College of Engineering",
     location: "Utica, New York",
     period: "Aug 2025 – Present",
-    logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/SUNY%20POLY-24BvuaZVfOkaoPDOJCgcIQDftVUyyR.jpeg",
+    logo: "/SUNY_POLY.jpeg",
     responsibilities: [
       "Developed and optimized modules for the Freedom Dashboard, a web-based platform emphasizing privacy and decentralization.",
       "Refactored backend components to improve scalability, performance, and maintainability.",
@@ -20,7 +20,7 @@ const experiences = [
     company: "Variance InfoTech Pvt. Ltd.",
     location: "Ahmedabad, India",
     period: "Jun 2024 – Dec 2024",
-    logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Varience-ZAJIHDUPf7SFUK33IQEpCRk5tbC6vs.png",
+    logo: "/Varience.png",
     responsibilities: [
       "Built modular, production-ready web applications using Node.js, React.js, and Express.js.",
       "Integrated RESTful APIs, optimized database operations, and enhanced user experience through performance tuning.",
@@ -32,7 +32,7 @@ const experiences = [
     company: "Arihant Satiate",
     location: "Ahmedabad, India",
     period: "Jan 2023 – Nov 2023",
-    logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Arihant%20Satiate-PW5pKwdo6GaiW4zF1k9oJ3x7X3qJmt.jpeg",
+    logo: "/Arihant_Satiate.jpeg",
     responsibilities: [
       "Designed responsive UI components and layouts for improved functionality and accessibility.",
       "Enhanced cross-platform performance and modularized front-end components.",
