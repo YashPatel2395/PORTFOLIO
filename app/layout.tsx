@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   description:
     "Graduate student specializing in Machine Learning & AI with expertise in building scalable software solutions.",
   generator: "v0.app",
+  icons: {
+    icon: "/icon.svg",
+  },
 }
 
 export default function RootLayout({
