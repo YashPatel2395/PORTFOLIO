@@ -8,7 +8,7 @@ const experiences = [
     company: "SUNY Polytechnic Institute — College of Engineering",
     location: "Utica, New York",
     period: "Aug 2025 – Present",
-    logo: "/suny_poly.jpeg",
+    logo: "/SUNY_POLY.jpeg",
     responsibilities: [
       "Developed and optimized modules for the Freedom Dashboard, a web-based platform emphasizing privacy and decentralization.",
       "Refactored backend components to improve scalability, performance, and maintainability.",
