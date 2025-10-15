@@ -11,7 +11,7 @@ const education = [
     status: "In Progress",
     description:
       "Graduate student specializing in Machine Learning and AI with expertise in building scalable software solutions. Proficient in Python, TensorFlow, PyTorch, and modern web technologies.",
-    logo: "/suny_poly.jpeg",
+    logo: "/SUNY_POLY.jpeg",
   },
   {
     degree: "Bachelor of Computer Applications",
