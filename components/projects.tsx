@@ -14,8 +14,8 @@ export function Projects() {
       ],
       tech: ["React.js", "Node.js", "ChatGPT API", "Finage API", "TensorFlow", "RSI", "MACD", "Bollinger Bands"],
       links: {
-        github: "#",
-        demo: "#",
+        github: "https://github.com/YashPatel2395/Trading_Agent_FRONT",
+        demo: "https://trading-agent-front-6tuv.vercel.app/",
       },
       icon: TrendingUp,
       gradient: "from-blue-500/20 via-cyan-500/20 to-teal-500/20",
@@ -42,8 +42,8 @@ export function Projects() {
         "MySQL",
       ],
       links: {
-        github: "#",
-        demo: "#",
+        github: "https://github.com/YashPatel2395/BlockCerti_FRONT",
+        demo: "https://www.blockcerti.com",
       },
       icon: Shield,
       gradient: "from-purple-500/20 via-violet-500/20 to-indigo-500/20",
@@ -97,7 +97,14 @@ export function Projects() {
                 />
 
                 <div className="relative grid lg:grid-cols-2 gap-6 sm:gap-8 p-6 sm:p-8 lg:p-10">
-                  <div className="relative overflow-hidden rounded-xl bg-muted/50 aspect-video lg:aspect-auto">
+                  <a
+                    href={project.links.demo !== "#" ? project.links.demo : undefined}
+                    target={project.links.demo !== "#" ? "_blank" : undefined}
+                    rel={project.links.demo !== "#" ? "noopener noreferrer" : undefined}
+                    className={`relative overflow-hidden rounded-xl bg-muted/50 aspect-video lg:aspect-auto ${
+                      project.links.demo !== "#" ? "cursor-pointer" : "cursor-default"
+                    }`}
+                  >
                     <img
                       src={project.image || "/placeholder.svg"}
                       alt={project.title}
@@ -106,7 +113,7 @@ export function Projects() {
                     <div className="absolute top-3 right-3 sm:top-4 sm:right-4 p-2 sm:p-3 rounded-xl bg-background/90 backdrop-blur-sm border-2 border-primary/20 group-hover:border-primary/50 transition-colors">
                       <Icon className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
                     </div>
-                  </div>
+                  </a>
 
                   <div className="flex flex-col justify-between">
                     <div>
@@ -119,20 +126,28 @@ export function Projects() {
                           <p className="text-xs sm:text-sm text-muted-foreground">{project.period}</p>
                         </div>
                         <div className="flex gap-2 sm:gap-3">
-                          <a
-                            href={project.links.github}
-                            className="p-2 sm:p-2.5 rounded-lg bg-muted/50 hover:bg-primary/10 border border-border hover:border-primary/50 text-muted-foreground hover:text-primary transition-all"
-                            aria-label="View on GitHub"
-                          >
-                            <Github className="h-4 w-4 sm:h-5 sm:w-5" />
-                          </a>
-                          <a
-                            href={project.links.demo}
-                            className="p-2 sm:p-2.5 rounded-lg bg-muted/50 hover:bg-primary/10 border border-border hover:border-primary/50 text-muted-foreground hover:text-primary transition-all"
-                            aria-label="View live demo"
-                          >
-                            <ExternalLink className="h-4 w-4 sm:h-5 sm:w-5" />
-                          </a>
+                          {project.links.github !== "#" && (
+                            <a
+                              href={project.links.github}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="p-2 sm:p-2.5 rounded-lg bg-muted/50 hover:bg-primary/10 border border-border hover:border-primary/50 text-muted-foreground hover:text-primary transition-all"
+                              aria-label="View on GitHub"
+                            >
+                              <Github className="h-4 w-4 sm:h-5 sm:w-5" />
+                            </a>
+                          )}
+                          {project.links.demo !== "#" && (
+                            <a
+                              href={project.links.demo}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="p-2 sm:p-2.5 rounded-lg bg-muted/50 hover:bg-primary/10 border border-border hover:border-primary/50 text-muted-foreground hover:text-primary transition-all"
+                              aria-label="View live demo"
+                            >
+                              <ExternalLink className="h-4 w-4 sm:h-5 sm:w-5" />
+                            </a>
+                          )}
                         </div>
                       </div>
 

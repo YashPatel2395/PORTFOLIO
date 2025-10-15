@@ -11,7 +11,7 @@ const education = [
     status: "In Progress",
     description:
       "Graduate student specializing in Machine Learning and AI with expertise in building scalable software solutions. Proficient in Python, TensorFlow, PyTorch, and modern web technologies.",
-    logo: "/SUNY_POLY.jpeg",
+    logo: "/suny_poly.jpeg",
   },
   {
     degree: "Bachelor of Computer Applications",
@@ -21,7 +21,7 @@ const education = [
     status: "Completed",
     description:
       "Comprehensive undergraduate program covering computer science fundamentals, software development, and application design. Built strong foundation in programming, databases, and web technologies.",
-    logo: "./GLS_University.jpg",
+    logo: "/GLS_University.jpg",
   },
 ]
 

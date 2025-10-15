@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import Image from "next/image"
+import { ExternalLink } from "lucide-react"
 
 const certifications = [
   {
@@ -9,6 +10,7 @@ const certifications = [
     year: "2025",
     type: "Professional Certificate",
     logo: "/stanford-online.png",
+    link: "https://coursera.org/share/507bc31244a25486cac0f905d2b26a5b",
     description:
       "Gained hands-on experience in linear/logistic regression, decision trees, and neural networks using Python and TensorFlow. Comprehensive specialization covering supervised & unsupervised learning, deep learning basics, and model evaluation.",
     courses: ["Advanced Learning Algorithms", "Supervised Machine Learning: Regression and Classification"],
@@ -19,6 +21,7 @@ const certifications = [
     year: "2025",
     type: "Professional Certificate",
     logo: "/Deeplearning.png",
+    link: "https://coursera.org/share/fba7e05ca41680641e03572bac038928",
     description:
       "Applied concepts of linear algebra, calculus, and probability to strengthen foundations in ML model development. Comprehensive coverage of mathematical foundations essential for understanding and implementing machine learning algorithms.",
     courses: ["Linear Algebra", "Calculus", "Probability & Statistics"],
@@ -58,9 +61,17 @@ export function Certifications() {
                 <div className="flex-1">
                   <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-3 sm:mb-4 gap-3">
                     <div>
-                      <h3 className="text-2xl sm:text-3xl font-bold mb-2 group-hover:text-accent transition-colors duration-300">
-                        {cert.title}
-                      </h3>
+                      <a
+                        href={cert.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 group/link"
+                      >
+                        <h3 className="text-2xl sm:text-3xl font-bold mb-2 group-hover/link:text-accent transition-colors duration-300">
+                          {cert.title}
+                        </h3>
+                        <ExternalLink className="h-5 w-5 text-muted-foreground group-hover/link:text-accent transition-colors duration-300" />
+                      </a>
                       <p className="text-base sm:text-lg text-muted-foreground">{cert.issuer}</p>
                     </div>
                     <div className="flex gap-2 sm:gap-3 flex-wrap">

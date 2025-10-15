@@ -29,7 +29,8 @@ export function About() {
             <p className="text-muted-foreground leading-relaxed text-base sm:text-lg md:text-xl">
               Results-driven Software Engineer with a strong foundation in Python, JavaScript, and full-stack web
               development. Experienced in designing scalable systems using React.js, Node.js, and Django, integrating
-              REST APIs,software design principles, and Agile collaboration. Skilled in applying data structures, algorithms, and
+              REST APIs, and managing relational and NoSQL databases. Proficient in cloud deployment on AWS/Vercel,
+              software design principles, and Agile collaboration. Skilled in applying data structures, algorithms, and
               machine learning concepts to build efficient, maintainable, and high-performing applications.
             </p>
           </div>

@@ -1028,6 +1028,9 @@ font-weight: 100 900;
   .cursor-default {
     cursor: default;
   }
+  .cursor-pointer {
+    cursor: pointer;
+  }
   .cursor-text {
     cursor: text;
   }
@@ -2563,6 +2566,13 @@ font-weight: 100 900;
         --tw-scale-y: 150%;
         --tw-scale-z: 150%;
         scale: var(--tw-scale-x) var(--tw-scale-y);
+      }
+    }
+  }
+  .group-hover\/link\:text-accent {
+    &:is(:where(.group\/link):hover *) {
+      @media (hover: hover) {
+        color: var(--accent);
       }
     }
   }
