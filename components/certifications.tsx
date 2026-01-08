@@ -5,6 +5,16 @@ import { ExternalLink } from "lucide-react"
 
 const certifications = [
   {
+    title: "GCP Associate Cloud Engineer",
+    issuer: "Google Cloud",
+    year: "2026",
+    type: "Associate Certificate",
+    logo: "/gcp.png",
+    link: "https://www.credly.com/badges/f5355e56-1863-4f29-875b-b7950827a888/public_url",
+    description: "Validated skills in deploying, securing, monitoring, and managing applications on Google Cloud Platform. Hands-on experience with Compute Engine, IAM, VPC networking, Cloud Storage, and load balancing, including setting up workloads with CI/CD pipelines.",
+    focus: ["Compute Engine", "VPC Networking", "IAM", "Cloud Storage", "Load Balancing", "CI/CD Deployments"]
+  },
+  {
     title: "Machine Learning Specialization",
     issuer: "Coursera / Stanford Online",
     year: "2025",
@@ -86,9 +96,9 @@ export function Certifications() {
                   <p className="text-muted-foreground leading-relaxed mb-4 sm:mb-6 text-sm sm:text-base">
                     {cert.description}
                   </p>
-                  <div className="flex flex-wrap gap-2 sm:gap-3 items-center">
+                  {cert.courses ? <><div className="flex flex-wrap gap-2 sm:gap-3 items-center">
                     <span className="text-sm sm:text-base font-semibold">Included Certificates:</span>
-                    {cert.courses.map((course, idx) => (
+                    {cert.courses?.map((course, idx) => (
                       <Badge
                         key={idx}
                         variant="secondary"
@@ -97,7 +107,7 @@ export function Certifications() {
                         {course}
                       </Badge>
                     ))}
-                  </div>
+                  </div></> : <></>}
                 </div>
               </div>
             </Card>
