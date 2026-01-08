@@ -26,7 +26,7 @@ const skills = [
   {
     icon: Wrench,
     title: "Tools",
-    items: ["Git", "Docker", "Postman", "Vercel", "Jupyter", "Google Colab"],
+    items: ["GCP","Git", "Docker", "Postman", "Vercel", "Jupyter", "Google Colab"],
     color: "from-red-500/20 to-rose-500/20",
     iconColor: "text-red-500",
   },
@@ -49,7 +49,7 @@ const skills = [
   {
     icon: Sparkles,
     title: "Concepts",
-    items: ["REST APIs", "WebSockets", "CI/CD", "Cloud Deployment", "Agile", "OOP", "ORM"],
+    items: ["REST APIs", "WebSockets", "CI/CD", "Cloud Deployment", "Agile", "OOP", "ORM" , "Cloud Engineering"],
     color: "from-indigo-500/20 to-violet-500/20",
     iconColor: "text-indigo-500",
   },
