@@ -163,10 +163,10 @@ export function Hero() {
               style={{ animationDelay: "0.2s" }}
             >
               <span className="px-4 sm:px-6 py-2 sm:py-2.5 bg-gradient-to-r from-primary to-primary/90 text-primary-foreground rounded-full text-xs sm:text-sm font-bold shadow-xl shadow-primary/40 hover:shadow-2xl hover:shadow-primary/50 hover:scale-105 transition-all duration-300">
-                ML Engineer
+              Software Engineer
               </span>
               <span className="px-4 sm:px-6 py-2 sm:py-2.5 bg-gradient-to-r from-accent to-accent/90 text-accent-foreground rounded-full text-xs sm:text-sm font-bold shadow-xl shadow-accent/40 hover:shadow-2xl hover:shadow-accent/50 hover:scale-105 transition-all duration-300">
-                Software Engineer
+              Google Cloud (PCA)
               </span>
             </div>
 
@@ -175,15 +175,13 @@ export function Hero() {
               className="text-base sm:text-lg md:text-xl text-muted-foreground mb-8 sm:mb-10 max-w-xl mx-auto lg:mx-0 text-balance leading-relaxed animate-fade-in"
               style={{ animationDelay: "0.3s" }}
             >
-              Graduate student specializing in{" "}
               <span className="font-bold text-transparent bg-gradient-to-r from-accent to-primary bg-clip-text">
-                Machine Learning & AI
+              Software Engineer
               </span>
-              , building{" "}
+              {" "}focused on building and deploying reliable cloud applications on{" "}
               <span className="font-bold text-transparent bg-gradient-to-r from-primary to-accent bg-clip-text">
-                scalable software solutions
-              </span>{" "}
-              that make an impact.
+              Google Cloud
+              </span>
             </p>
 
             {/* Social links */}

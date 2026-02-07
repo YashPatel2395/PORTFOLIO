@@ -10,7 +10,7 @@ const education = [
     period: "January 2025 – Present",
     status: "In Progress",
     description:
-      "Graduate student specializing in Machine Learning and AI with expertise in building scalable software solutions. Proficient in Python, TensorFlow, PyTorch, and modern web technologies.",
+      "Graduate program providing broad and rigorous training in core computer science areas, including algorithms, data structures, operating systems, databases, software engineering, and applied machine learning. Coursework and projects emphasize problem-solving, system design, and translating theoretical concepts into practical, scalable software solutions.",
     logo: "/SUNY_POLY.jpeg",
   },
   {
@@ -20,7 +20,7 @@ const education = [
     period: "April 2021 – May 2024",
     status: "Completed",
     description:
-      "Comprehensive undergraduate program covering computer science fundamentals, software development, and application design. Built strong foundation in programming, databases, and web technologies.",
+      "Undergraduate program covering computer science fundamentals, programming, data structures, databases, and web application development. Developed a strong foundation in problem-solving, software design, and practical implementation through academic projects and coursework.",
     logo: "/GLS_University.jpg",
   },
 ]

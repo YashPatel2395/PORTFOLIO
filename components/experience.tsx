@@ -10,9 +10,9 @@ const experiences = [
     period: "Aug 2025 – Present",
     logo: "/SUNY_POLY.jpeg",
     responsibilities: [
-      "Developed and optimized modules for the Freedom Dashboard, a web-based platform emphasizing privacy and decentralization.",
-      "Refactored backend components to improve scalability, performance, and maintainability.",
-      "Collaborated with teams on architecture design, feature planning, and testing to enhance platform stability.",
+      "Built responsive and modular UI components for the Freedom Dashboard, developed and operated on Google Cloud Platform.",
+      "Integrated backend APIs and WebSocket channels to enable seamless real-time chat and notifications.",
+      "Improved UI rendering performance by optimizing state management and reducing unnecessary re-renders.",
     ],
   },
   {
@@ -22,9 +22,9 @@ const experiences = [
     period: "Jun 2024 – Dec 2024",
     logo: "/Varience.png",
     responsibilities: [
-      "Built modular, production-ready web applications using Node.js, React.js, and Express.js.",
-      "Integrated RESTful APIs, optimized database operations, and enhanced user experience through performance tuning.",
-      "Contributed to Agile sprints, participated in code reviews, and maintained coding best practices.",
+      "Developed production-quality React applications used by 1K+ users, delivering clean UI and smooth user interactions.",
+      "Collaborated with design teams to convert Figma prototypes into responsive UI with Tailwind CSS.",
+      "Built and consumed REST APIs for real-time dashboards and data-driven product features.",
     ],
   },
   {
@@ -34,9 +34,9 @@ const experiences = [
     period: "Jan 2023 – Nov 2023",
     logo: "/Arihant_Satiate.jpeg",
     responsibilities: [
-      "Designed responsive UI components and layouts for improved functionality and accessibility.",
-      "Enhanced cross-platform performance and modularized front-end components.",
-      "Strengthened technical proficiency in React, Tailwind CSS, TypeScript, Node.js, MySQL, and TypeORM.",
+      "Delivered end-to-end features using React, Node.js, and MySQL on Google Cloud–hosted environments.",
+      "Streamlined UX flows and reduced load times by optimizing cloud-served assets and requests.",
+      "implemented reusable components tested across cloud-based deployments.",
     ],
   },
 ]

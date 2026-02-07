@@ -5,6 +5,24 @@ import { ExternalLink } from "lucide-react"
 
 const certifications = [
   {
+    title: "GCP Professional Cloud Architect",
+    issuer: "Google Cloud",
+    year: "2026",
+    type: "Professional Certificate",
+    logo: "/gcp.png",
+    link: "https://www.credly.com/badges/8f2621bc-43a7-4393-9449-567126758d40/linked_in_profile",
+    description: "Validated expertise in designing, developing, and managing secure, scalable, and highly available solutions on Google Cloud Platform. Demonstrated ability to architect cloud-native systems aligned with business requirements, including networking, compute, storage, security, reliability, and cost optimization across distributed environments.",
+    focus: [
+      "Cloud Architecture Design",
+      "VPC & Hybrid Networking",
+      "IAM & Security Architecture",
+      "High Availability & Disaster Recovery",
+      "Scalable Compute (GKE, Cloud Run, Compute Engine)",
+      "Data Storage & Database Selection",
+      "Cost Optimization & Reliability"
+    ]
+  },  
+  {
     title: "GCP Associate Cloud Engineer",
     issuer: "Google Cloud",
     year: "2026",

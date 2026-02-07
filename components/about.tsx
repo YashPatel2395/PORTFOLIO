@@ -24,14 +24,11 @@ export function About() {
           <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
           <div className="relative z-10">
             <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8 text-balance bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
-              Results-Driven Software Engineer
+            Cloud Software Engineer
             </h3>
             <p className="text-muted-foreground leading-relaxed text-base sm:text-lg md:text-xl">
-              Results-driven Software Engineer with a strong foundation in Python, JavaScript, and full-stack web
-              development. Experienced in designing scalable systems using React.js, Node.js, and Django, integrating
-              REST APIs, and managing relational and NoSQL databases. Proficient in cloud deployment on AWS/Vercel,
-              software design principles, and Agile collaboration. Skilled in applying data structures, algorithms, and
-              machine learning concepts to build efficient, maintainable, and high-performing applications.
+            Software Engineer specializing in cloud-native application development on Google Cloud, with experience designing scalable backend services, deploying containerized workloads, and integrating full-stack web applications. Proficient in Python, JavaScript, React, Node.js, and Django, with strong understanding of system design, APIs, and data storage.
+            Google Cloud Professional Cloud Architect (PCA) certified, with practical experience building and deploying production-ready systems using managed cloud infrastructure.
             </p>
           </div>
         </Card>
