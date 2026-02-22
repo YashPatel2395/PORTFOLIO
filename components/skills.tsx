@@ -12,7 +12,7 @@ const skills = [
   {
     icon: Layers,
     title: "Frameworks",
-    items: ["React.js", "Node.js", "Express.js", "Django", "Flask"],
+    items: ["React.js", "Node.js", "Express.js", "Django", "Flask" , "Vue.Js"],
     color: "from-green-500/20 to-emerald-500/20",
     iconColor: "text-green-500",
   },
