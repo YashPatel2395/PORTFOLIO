@@ -10,9 +10,9 @@ const experiences = [
     period: "Aug 2025 – Present",
     logo: "/SUNY_POLY.jpeg",
     responsibilities: [
-      "Built responsive and modular UI components for the Freedom Dashboard, developed and operated on Google Cloud Platform.",
-      "Integrated backend APIs and WebSocket channels to enable seamless real-time chat and notifications.",
-      "Improved UI rendering performance by optimizing state management and reducing unnecessary re-renders.",
+      "Built responsive, modular UI components for the Freedom Dashboard, ensuring cross-browser compatibility, accessibility, and scalability, deployed and operated within Google Cloud Platform (GCP) environments.",
+      "Integrated backend services, RESTful APIs, and WebSocket-based real-time communication, enabling low-latency chat, live notifications,and dynamic event-driven updates.",
+      "Designed and implemented real-time video conferencing functionality, enabling stable multi-user sessions with up to 10 concurrent participants, ensuring smooth audio/video communication and synchronization.",
     ],
   },
   {
@@ -22,9 +22,9 @@ const experiences = [
     period: "Jun 2024 – Dec 2024",
     logo: "/Varience.png",
     responsibilities: [
-      "Developed production-quality React applications used by 1K+ users, delivering clean UI and smooth user interactions.",
-      "Collaborated with design teams to convert Figma prototypes into responsive UI with Tailwind CSS.",
-      "Built and consumed REST APIs for real-time dashboards and data-driven product features.",
+      "Engineered scalable React-based web applications used by 1K+ active users, emphasizing clean UI, reusable components, performance optimization, and state management best practices.",
+      "Partnered with UI/UX designers to convert Figma designs into responsive layouts with Tailwind CSS, improving usability, visual consistency, and mobile responsiveness.",
+      "Integrated and consumed REST APIs to support real-time dashboards, asynchronous data flows, and interactive product features, ensuring robustness and low-latency updates.",
     ],
   },
   {
@@ -34,9 +34,21 @@ const experiences = [
     period: "Jan 2023 – Nov 2023",
     logo: "/Arihant_Satiate.jpeg",
     responsibilities: [
-      "Delivered end-to-end features using React, Node.js, and MySQL on Google Cloud–hosted environments.",
-      "Streamlined UX flows and reduced load times by optimizing cloud-served assets and requests.",
-      "implemented reusable components tested across cloud-based deployments.",
+      "Delivered end-to-end full-stack features using React, Node.js, and MySQL in Google Cloud–hosted environments, contributing to frontend UI, backend services, and database-driven functionality..",
+      "Improved application performance and user experience by optimizing cloud-served static assets, API request handling, and client–server interactions, reducing load times and enhancing responsiveness.",
+      "Developed reusable, modular components following clean architecture and maintainability best practices, validated through testing across cloud-based deployments.",
+    ],
+  },
+  {
+    title: "Software Engineer Intern",
+    company: "Rethinksoft",
+    location: "Gandhinagar, India",
+    period: "Mar 2022 – Sep 2022",
+    logo: "/rethinksoft_logo.jpeg",
+    responsibilities: [
+      " Contributed to full-stack development using Django, Vue.js, and Node.js, delivering end-to-end features across frontend, backend services, and RESTful APIs, supporting a responsive and scalable web application.",
+      "Designed and managed database models via ORM, and optimized SQL queries (indexing, query refactoring, performance tuning), reducing average response times by 40% and improving query execution efficiency by 30%.",
+      "Supported OLTP workflows, ensuring data integrity, transactional consistency, and reliability, contributing to 25% higher API throughput and maintaining 99.9% transaction success rate through debugging and performance improvements.",
     ],
   },
 ]
