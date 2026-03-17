@@ -46,8 +46,9 @@ const experiences = [
     period: "Mar 2022 – Sep 2022",
     logo: "/rethinksoft_logo.jpeg",
     responsibilities: [
-      " Contributed to full-stack development using Django, Vue.js, and Node.js, delivering end-to-end features across frontend, backend services, and RESTful APIs, supporting a responsive and scalable web application.",
-      "Designed and managed database models via ORM, and optimized SQL queries (indexing, query refactoring, performance tuning), reducing average response times by 40% and improving query execution efficiency by 30%.",
+      "Contributed to full-stack development using Django, Vue.js, and Node.js, building scalable backend services and responsive frontend features integrated through RESTful APIs.",
+      "Designed and optimized relational database models using ORM and advanced SQL tuning techniques (indexing, query refactoring), reducing average response time by 40% and improving query efficiency by 30%",
+      "Deployed and maintained application services on AWS using services such as EC2 and S3, supporting cloud-based hosting, storage, and environment configuration for development and staging workflows.",
       "Supported OLTP workflows, ensuring data integrity, transactional consistency, and reliability, contributing to 25% higher API throughput and maintaining 99.9% transaction success rate through debugging and performance improvements.",
     ],
   },
