@@ -26,7 +26,7 @@ const skills = [
   {
     icon: Wrench,
     title: "Tools",
-    items: ["GCP","Git", "Docker", "Postman", "Vercel", "Jupyter", "Google Colab"],
+    items: ["GCP","AWS","Git", "Docker", "Postman", "Vercel", "Jupyter", "Google Colab"],
     color: "from-red-500/20 to-rose-500/20",
     iconColor: "text-red-500",
   },
